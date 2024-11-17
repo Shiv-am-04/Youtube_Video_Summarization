@@ -20,4 +20,4 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
           git fetch origin main
-          git push https://shiv-am-04E:$HF_TOKEN@huggingface.co/spaces/shiv-am-04/Youtube_and_Web_Summarizer HEAD:main
+          git push https://shiv-am-04E:$HF_TOKEN@huggingface.co/spaces/shiv-am-04/Youtube_and_Web_Summarizer main
