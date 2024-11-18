@@ -7,13 +7,14 @@ from langchain_core.prompts import PromptTemplate
 from langchain.chains.summarize import load_summarize_chain
 from langchain_community.document_loaders import YoutubeLoader,UnstructuredURLLoader
 from PIL import Image
+import pytube
 
 load_dotenv()
 groq_api_key = os.getenv('GROQ_API_KEY')
 
-st.set_page_config(page_title='Summarizer')
+pytube.innertube._default_clients['ANDROID']=pytube.innertube._default_clients['WEB']
 
-# st.secrets['GROQ_API_KEY']
+st.set_page_config(page_title='Summarizer')
 
 img1 = Image.open('youtubeLogo.jpg')
 
