@@ -9,8 +9,9 @@ from langchain_community.document_loaders import YoutubeLoader,UnstructuredURLLo
 from PIL import Image
 
 load_dotenv()
-
 groq_api_key = os.getenv('GROQ_API_KEY')
+
+st.secrets['GROQ_API_KEY']
 
 img1 = Image.open(r'D:\UDEMY\GenAI\Langchain\Text Summarization\youtubeLogo.jpg')
 
@@ -89,7 +90,3 @@ if st.button('Summarize the Video/Web-page'):
 
         except Exception as e:
             st.exception(f'Exception : {e}')
-
-
-# HF_Token
-# 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
