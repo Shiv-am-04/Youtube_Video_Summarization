@@ -11,13 +11,13 @@ from PIL import Image
 load_dotenv()
 groq_api_key = os.getenv('GROQ_API_KEY')
 
+st.set_page_config(page_title='Summarizer')
+
 st.secrets['GROQ_API_KEY']
 
 img1 = Image.open('youtubeLogo.jpg')
 
 img2 = Image.open('web.jpeg')
-
-st.set_page_config(page_title='Summarizer')
 
 col1,col2,col3 = st.columns([1,1,3])
 
