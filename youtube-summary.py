@@ -7,8 +7,8 @@ from langchain_core.prompts import PromptTemplate
 from langchain.chains.summarize import load_summarize_chain
 from langchain_community.document_loaders import YoutubeLoader,UnstructuredURLLoader
 from PIL import Image
-from pytube.innertube import InnerTube
-from innertube import _default_clients
+from pytube.innertube import InnerTube,_default_clients
+
 
 # original_init = InnerTube.__init__
 
