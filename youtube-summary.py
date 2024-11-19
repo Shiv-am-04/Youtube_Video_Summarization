@@ -12,7 +12,7 @@ import pytube
 load_dotenv()
 groq_api_key = os.getenv('GROQ_API_KEY')
 
-pytube.innertube._default_clients['ANDROID']=pytube.innertube._default_clients['WEB']
+innertube._default_clients['ANDROID']['context']['client']['clientName'] = 'WEB'
 
 st.set_page_config(page_title='Summarizer')
 
