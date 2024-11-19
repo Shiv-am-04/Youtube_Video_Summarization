@@ -7,7 +7,7 @@ original_init = innertube.InnerTube.__init__
 # Define a patched version of the constructor that forces the client to 'WEB'
 def patched_init(self, *args, **kwargs):
     # Change the client to 'WEB'
-    kwargs['client'] = 'WEB'
+    args['client'] = 'WEB'
     # Call the original constructor
     original_init(self, *args, **kwargs)
 
