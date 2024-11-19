@@ -7,12 +7,10 @@ from langchain_core.prompts import PromptTemplate
 from langchain.chains.summarize import load_summarize_chain
 from langchain_community.document_loaders import YoutubeLoader,UnstructuredURLLoader
 from PIL import Image
-import pytube
+import path_innertube
 
 load_dotenv()
 groq_api_key = os.getenv('GROQ_API_KEY')
-
-innertube._default_clients['ANDROID']['context']['client']['clientName'] = 'WEB'
 
 st.set_page_config(page_title='Summarizer')
 
