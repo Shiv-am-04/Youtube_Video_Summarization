@@ -11,7 +11,7 @@ from pytube.innertube import InnerTube
 
 original_init = InnerTube.__init__
 
-Define a new init method that sets 'WEB' as the default client
+# Define a new init method that sets 'WEB' as the default client
 def new_init(self, client='WEB', *args, **kwargs):
     original_init(self, client=client, *args, **kwargs)
     
