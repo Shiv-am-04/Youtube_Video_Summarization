@@ -7,21 +7,16 @@ from langchain_core.prompts import PromptTemplate
 from langchain.chains.summarize import load_summarize_chain
 from langchain_community.document_loaders import YoutubeLoader,UnstructuredURLLoader
 from PIL import Image
-from pytube.innertube import InnerTube,_default_clients
+from pytube.innertube import InnerTube
 
+original_init = InnerTube.__init__
 
-# original_init = InnerTube.__init__
-
-# Define a new init method that sets 'WEB' as the default client
-# def new_init(self, client='WEB', *args, **kwargs):
-#     original_init(self, client=client, *args, **kwargs)
+Define a new init method that sets 'WEB' as the default client
+def new_init(self, client='WEB', *args, **kwargs):
+    original_init(self, client=client, *args, **kwargs)
     
-# # Replace the original init method with the new one
-# InnerTube.__init__ = new_init
-
-_default_clients['ANDROID_MUSIC']['context'] = _default_clients['WEB']['context']
-_default_clients['ANDROID_MUSIC']['header'] = _default_clients['WEB']['header']
-_default_clients['ANDROID_MUSIC']['api_key'] = _default_clients['WEB']['api_key']
+# Replace the original init method with the new one
+InnerTube.__init__ = new_init
 
 load_dotenv()
 
