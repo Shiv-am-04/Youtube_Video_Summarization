@@ -81,7 +81,7 @@ if st.button('Summarize the Video/Web-page'):
     else:
         try:
             with st.spinner('Summarizing...'):
-                if 'youtube.com' in URL:
+                if 'youtube.com' in URL or 'youtu.be' in URL:
                     loader = YoutubeLoader.from_youtube_url(URL,add_video_info=True,language=['en-IN','hi','en'])
                 else:
                     loader = UnstructuredURLLoader([URL],ssl_verify=False,mode='single',
