@@ -7,9 +7,19 @@ from langchain_core.prompts import PromptTemplate
 from langchain.chains.summarize import load_summarize_chain
 from langchain_community.document_loaders import YoutubeLoader,UnstructuredURLLoader
 from PIL import Image
-import path_innertube
+from pytube.innertube import InnerTube
+
+original_init = InnerTube.__init__
+
+# Define a new init method that sets 'WEB' as the default client
+def new_init(self, client='WEB', *args, **kwargs):
+    original_init(self, client=client, *args, **kwargs)
+    
+# Replace the original init method with the new one
+InnerTube.__init__ = new_init
 
 load_dotenv()
+
 groq_api_key = os.getenv('GROQ_API_KEY')
 
 st.set_page_config(page_title='Summarizer')
