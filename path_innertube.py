@@ -12,4 +12,4 @@ def patched_init(self, *args, **kwargs):
     original_init(self, *args, **kwargs)
 
 # Apply the patch to the Innertube class
-innertube.Innertube.__init__ = patched_init
+innertube.InnerTube.__init__ = patched_init
