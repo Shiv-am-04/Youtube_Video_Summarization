@@ -16,15 +16,6 @@ from langchain.agents import create_openai_tools_agent,AgentExecutor
 
 load_dotenv()
 
-original_init = InnerTube.__init__
-
-# Define a new init method that sets 'WEB' as the default client
-def new_init(self, client='WEB', *args, **kwargs):
-    original_init(self, client=client, *args, **kwargs)
-
-# Replace the original init method with the new one
-InnerTube.__init__ = new_init
-
 # api keys
 groq_api_key = os.getenv('GROQ_API_KEY')
 
