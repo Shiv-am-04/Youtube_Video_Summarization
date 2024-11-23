@@ -16,7 +16,7 @@ duckduckgo-search
 langserve
 sse_starlette
 validators
-pytube
+git+https://github.com/Shiv-am-04/pytube.git@master#egg=pytube
 youtube-transcript-api
 unstructured
 langchain_nvidia_ai_endpoints
