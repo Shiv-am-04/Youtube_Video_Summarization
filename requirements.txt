@@ -12,6 +12,7 @@ faiss-cpu
 langchain_chroma
 langchain_groq
 uvicorn
+duckduckgo-search
 langserve
 sse_starlette
 validators
